@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+    <script>
+
+    const token = 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MTYsInVzZXJuYW1lIjoidGVzdCIsImlhdCI6MTU4MzYxMTAwOCwiZXhwIjoxNTg2MjAzMDA4fQ.mAQMF-7w3PN4lvx4T-4HEaX38ltxUC8KCyoXyfONq6w';
+
+const decodedPaylaod = atob(token.split('.')[1]);
+console.log(decodedPaylaod);
+        </script>
+</body>
+</html>

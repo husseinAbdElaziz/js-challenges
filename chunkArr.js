@@ -14,16 +14,13 @@
 // };
 
 const arr = [1,2,3,4,5,6,7,8,9];
-// console.log(chunk(arr, 3));
-// chunk(arr, 2)
-
 
 const chunk = (arr, size) => {
-	const chunked = [];
+	const chunkedArr = [];
 	for(let i = 0; i < arr.length ; i+=size) {
-		chunked.push(arr.slice(i, i+size));
+		chunkedArr.push(arr.slice(i, i+size));
 	}
-	return chunked;
+	return chunkedArr;
 };
 
 console.log(chunk(arr, 2)); // expected result [ [ 1, 2 ], [ 3, 4 ], [ 5, 6 ], [ 7, 8 ], [ 9 ] ]
