@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        #home {
+            background: url('slide.png') 50% no-repeat fixed;
+            background-size: cover;
+            min-height: 500px;
+            /* -webkit-font-smoothing: antialiased;
+        text-rendering: optimizeLegibility; */
+        }
+    </style>
+</head>
+
+<body>
+
+    <div style="width: 100%; height: 600px;"></div>
+
+    <section id="home" data-speed="10" class="parallex">
+    </section>
+
+
+    <div style="width: 100%; height: 600px;"></div>
+
+    <!-- <script src="jquery-3.3.1.min.js"></script> -->
+    <script>
+
+
+        const parallaxDiv = document.getElementsByClassName('parallex');
+        console.log(parallaxDiv)
+
+        parallaxDiv.forEach(function (ele) {
+
+            window.onscroll = () => {
+                // scroll the background at var speed
+                // the yPost is negative value becaus we're scrolling it up
+
+                let yPost = -window.pageYOffset / this.data('speed');
+
+                // put together our final background position
+                let coords = '50% ' + yPost + 'px';
+
+                // move background
+                ele.style.backgroundPosition = coords
+                // css({backgroundPosition: coords});
+            }
+        });
+
+// $( function() {
+//     let $window = $(window);
+
+//     // paralex background effect
+//     $('.parallex').each(function() {
+//         let $bgobj = $(this);
+
+
+//         $(window).scroll(function() {
+//             // scroll the background at var speed
+//             // the yPost is negative value becaus we're scrolling it up
+
+//             let yPost = -($window.scrollTop() / $bgobj.data('speed'));
+
+//             // put together our final background position
+//             let coords = '50% '+ yPost + 'px';
+
+//             // move background
+//             $bgobj.css({backgroundPosition: coords});
+//         })
+//     })
+// })
+    </script>
+</body>
+
+</html>
